@@ -74,7 +74,7 @@ describe "Student" do
     end
   end
 
-  describe '#new_from_db' do
+  describe '.new_from_db' do
     it 'creates an instance with corresponding attribute values' do
       row = [1, "Pat", 12]
       pat = Student.new_from_db(row)
@@ -85,7 +85,7 @@ describe "Student" do
     end
   end
 
-  describe '#find_by_name' do
+  describe '.find_by_name' do
     it 'returns an instance of student that matches the name from the DB' do
       josh.save
       josh_id = josh.id
